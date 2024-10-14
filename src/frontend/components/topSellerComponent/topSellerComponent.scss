@@ -1,0 +1,32 @@
+@import "../../styles/index";
+
+.top-seller {
+  &__item-container {
+    width: fit-content;
+
+    .seller {
+      &-info {
+        @include flexBox(column, center, center);
+        margin-top: 24px;
+      }
+
+      &-name {
+        text-decoration: none;
+        color: $white-color;
+        font-weight: 600;
+        transition: $transition;
+        font-size: 18px;
+
+        &:hover {
+          color: $blue;
+        }
+      }
+
+      &-total__price {
+        font-size: 15px;
+        color: $dark-grey-color;
+        font-weight: 600;
+      }
+    }
+  }
+}

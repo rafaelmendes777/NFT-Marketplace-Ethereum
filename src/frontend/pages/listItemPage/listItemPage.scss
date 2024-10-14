@@ -1,0 +1,40 @@
+@import "../../styles/index";
+
+.my-listed {
+  padding-right: 0;
+  padding-left: 0;
+  padding-bottom: 24px;
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  &__container {
+    &:not(:last-child) {
+      margin-bottom: 36px;
+    }
+  }
+
+  @include mobile {
+    &__items .item {
+      width: 100%;
+    }
+  }
+  @include tablet {
+    &__items .item {
+      width: calc((100% / 2) - 12px);
+    }
+  }
+  @include desktop {
+    &__items .item {
+      width: calc((100% / 3) - 12px);
+    }
+  }
+  @include wide-desktop {
+    &__items .item {
+      width: calc((100% / 4) - 12px);
+    }
+  }
+}

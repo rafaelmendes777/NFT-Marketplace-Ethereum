@@ -1,0 +1,34 @@
+@import "../../styles/index";
+
+.explore-page {
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 24px;
+
+  &__container {
+    @include flexBox(row, center, center);
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  @include mobile {
+    &__container .item {
+      width: 100%;
+    }
+  }
+  @include tablet {
+    &__container .item {
+      width: calc((100% / 2) - 12px);
+    }
+  }
+  @include desktop {
+    &__container .item {
+      width: calc((100% / 3) - 12px);
+    }
+  }
+  @include wide-desktop {
+    &__container .item {
+      width: calc((100% / 4) - 12px);
+    }
+  }
+}
